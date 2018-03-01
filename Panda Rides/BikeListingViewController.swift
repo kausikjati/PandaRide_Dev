@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+struct MenuItem
+{
+    let title : String?
+    let image : UIImage?
+}
+
 class BikeListingViewController: UIViewController, DateTimePickerDelegate {
     @IBOutlet weak var menuTable: UITableView!
     @IBOutlet weak var bikeTable: UITableView!
@@ -17,19 +24,21 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
     @IBOutlet weak var menuVIew: NSLayoutConstraint!
     @IBOutlet weak var menuView_: UIView!
     
-    var menu_array = [Dictionary<String, String>]()
+    var menu_array = [MenuItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //self.navigationController?.navigationBar.isHidden = true
         
-        menu_array.append(["image": "" ,"title" : "Bike Listing"])
-        menu_array.append(["image": "" ,"title" : "Tariff"])
-        menu_array.append(["image": "" ,"title" : "Contact us"])
-        menu_array.append(["image": "" ,"title" : "About us"])
-        menu_array.append(["image": "" ,"title" : "Terms and Conditions"])
-        menu_array.append(["image": "" ,"title" : "Faq"])
+        menu_array = [MenuItem(title: "Bike Listing", image: #imageLiteral(resourceName: "ic_view_quilt")),
+                          MenuItem(title: "Tariff", image: #imageLiteral(resourceName: "ic_view_quilt")),
+                          MenuItem(title: "Contact us", image: #imageLiteral(resourceName: "ic_view_quilt")),
+                          MenuItem(title: "About us", image: #imageLiteral(resourceName: "ic_view_quilt")),
+                          MenuItem(title: "Terms and Conditions", image: #imageLiteral(resourceName: "ic_view_quilt")),
+                          MenuItem(title: "Faq", image: #imageLiteral(resourceName: "ic_view_quilt"))]
+        
+ 
         
         self.title = "RIDES AVAILABLE"
         menuTable.tableFooterView = UIView()
@@ -233,7 +242,7 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
         else
         {
             let menu_cell = tableView.dequeueReusableCell(withIdentifier: "menu") as! MenuTableViewCell
-            menu_cell.option_lbl.text = menu_array[indexPath.row]["title"]
+            menu_cell.option_lbl.text = menu_array[indexPath.row].title
             return menu_cell
         }
     }
