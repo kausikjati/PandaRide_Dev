@@ -235,6 +235,9 @@ public protocol DateTimePickerDelegate {
                             y: 0,
                             width: screenSize.width,
                             height: screenSize.height)
+        
+    
+        
         // shadow view
         shadowView = UIView(frame: CGRect(x: 0,
                                           y: 0,
@@ -340,7 +343,7 @@ public protocol DateTimePickerDelegate {
         doneButton.setTitleColor(.white, for: .normal)
         doneButton.backgroundColor = doneBackgroundColor ?? darkColor.withAlphaComponent(0.5)
         doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-        doneButton.layer.cornerRadius = 3
+        doneButton.layer.cornerRadius = 5
         doneButton.layer.masksToBounds = true
         doneButton.addTarget(self, action: #selector(DateTimePicker.dismissView(sender:)), for: .touchUpInside)
         contentView.addSubview(doneButton)
@@ -456,8 +459,7 @@ public protocol DateTimePickerDelegate {
         }, completion: nil)
     }
     
-    @objc
-    func setToday() {
+    @objc  func setToday() {
         selectedDate = Date()
         resetTime()
     }

@@ -20,6 +20,8 @@
 		975BB4962047DC5000F36712 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BB4922047DC5000F36712 /* DateCollectionViewCell.swift */; };
 		975BB4982047EAE400F36712 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BB4972047EAE400F36712 /* FilterTableViewController.swift */; };
 		975BB49A204800D900F36712 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BB499204800D900F36712 /* MenuTableViewCell.swift */; };
+		97AD1178204C1191004A5F3F /* TarrifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1177204C1191004A5F3F /* TarrifViewController.swift */; };
+		97AD117A204C11E5004A5F3F /* TariffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1179204C11E5004A5F3F /* TariffTableViewCell.swift */; };
 		97D5B75F20427E6400A2439B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B75E20427E6400A2439B /* AppDelegate.swift */; };
 		97D5B76120427E6400A2439B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B76020427E6400A2439B /* ViewController.swift */; };
 		97D5B76420427E6500A2439B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D5B76220427E6500A2439B /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		975BB4922047DC5000F36712 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		975BB4972047EAE400F36712 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		975BB499204800D900F36712 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		97AD1177204C1191004A5F3F /* TarrifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarrifViewController.swift; sourceTree = "<group>"; };
+		97AD1179204C11E5004A5F3F /* TariffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffTableViewCell.swift; sourceTree = "<group>"; };
 		97D5B75B20427E6400A2439B /* Panda Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panda Rides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D5B75E20427E6400A2439B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D5B76020427E6400A2439B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				9755E452204812F300BC78CD /* DetailsImageTableViewCell.swift */,
 				9755E4542048131A00BC78CD /* DetailsInfoTableViewCell.swift */,
 				9755E4562048198400BC78CD /* LocationTableViewCell.swift */,
+				97AD1179204C11E5004A5F3F /* TariffTableViewCell.swift */,
 			);
 			path = "Bike Cell";
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				975BB4972047EAE400F36712 /* FilterTableViewController.swift */,
 				9755E450204812C000BC78CD /* DetailsViewController.swift */,
 				9755E4582048270E00BC78CD /* ContactTableViewController.swift */,
+				97AD1177204C1191004A5F3F /* TarrifViewController.swift */,
 				97D5B76220427E6500A2439B /* Main.storyboard */,
 				97D5B76520427E6500A2439B /* Assets.xcassets */,
 				97D5B76720427E6500A2439B /* LaunchScreen.storyboard */,
@@ -207,8 +213,10 @@
 				975BB48A2047BF1200F36712 /* BikeListingViewController.swift in Sources */,
 				975BB4962047DC5000F36712 /* DateCollectionViewCell.swift in Sources */,
 				9755E4592048270E00BC78CD /* ContactTableViewController.swift in Sources */,
+				97AD117A204C11E5004A5F3F /* TariffTableViewCell.swift in Sources */,
 				97D5B75F20427E6400A2439B /* AppDelegate.swift in Sources */,
 				975BB49A204800D900F36712 /* MenuTableViewCell.swift in Sources */,
+				97AD1178204C1191004A5F3F /* TarrifViewController.swift in Sources */,
 				9755E451204812C000BC78CD /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

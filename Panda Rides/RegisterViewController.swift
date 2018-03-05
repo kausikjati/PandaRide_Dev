@@ -16,11 +16,7 @@ class RegisterViewController: UITableViewController {
 
       
         
-        let menuBtn = UIButton.init(type: .system)
-        menuBtn.setImage(#imageLiteral(resourceName: "left-arrow"), for: .normal)
-        menuBtn.frame = CGRect.init(x: 0, y: 0, width: 34, height: 30)
-        menuBtn.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: menuBtn)
+     
       // navigationItem.backBarButtonItem = UIBarButtonItem.init(title: nil, style: .plain, target: nil, action: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

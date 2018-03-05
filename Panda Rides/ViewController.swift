@@ -51,6 +51,11 @@ class ViewController: UIViewController   {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        let item = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem = item
+    }
 
 }
 

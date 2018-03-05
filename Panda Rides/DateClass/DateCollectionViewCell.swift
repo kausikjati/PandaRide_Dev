@@ -26,6 +26,8 @@ class DateCollectionViewCell: UICollectionViewCell {
         
         super.init(frame: frame)
         
+        
+        
         contentView.addSubview(dayLabel)
         contentView.addSubview(numberLabel)
         contentView.backgroundColor = .white

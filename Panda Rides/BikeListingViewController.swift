@@ -230,7 +230,7 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
         {
         let bikeCell = tableView.dequeueReusableCell(withIdentifier: "bikeinfo") as! BikeTableViewCell
         bikeCell.mainView.layer.cornerRadius = 5
-        bikeCell.mainView.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: -0.5, height: 1), radius: 3, scale: true)
+        //bikeCell.mainView.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: -0.5, height: 1), radius: 3, scale: true)
         bikeCell.location_lbl.text = "Bagnan , Kolkata , Westbengal , 711303"
         bikeCell.info_lbl.text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
         
@@ -252,11 +252,32 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
         if tableView.tag == 1
         {
             
-            let bikelisting_obj = self.storyboard?.instantiateViewController(withIdentifier: "contact") as! ContactTableViewController
-            self.navigationController?.pushViewController(bikelisting_obj, animated: true)
+            let menu_item = self.menu_array[indexPath.row].title ?? ""
+            
+            switch menu_item
+            {
+            case "Tariff":
+                let bikelisting_obj = self.storyboard?.instantiateViewController(withIdentifier: "tarrif") as! TarrifViewController
+                self.navigationController?.pushViewController(bikelisting_obj, animated: true)
+                
+                break
+                
+                
+            default:
+                
+                
+                let bikelisting_obj = self.storyboard?.instantiateViewController(withIdentifier: "contact") as! ContactTableViewController
+                self.navigationController?.pushViewController(bikelisting_obj, animated: true)
+            }
+            
+            
         }
         else
         {
+            
+            
+            
+            
             let bikelisting_obj = self.storyboard?.instantiateViewController(withIdentifier: "details") as! DetailsViewController
             self.navigationController?.pushViewController(bikelisting_obj, animated: true)
         }
