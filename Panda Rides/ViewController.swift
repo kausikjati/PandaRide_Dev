@@ -18,7 +18,7 @@ class ViewController: UIViewController   {
         
         
         //navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        //navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.shadowImage = UIImage()
         
         //Register tap
         

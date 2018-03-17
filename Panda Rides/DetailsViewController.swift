@@ -126,6 +126,30 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
             }
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+       if indexPath.section == 0
+       {
+            if indexPath.row == 0
+            {
+                self.title = "Details"
+            }
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0
+        {
+            if indexPath.row == 0
+            {
+                self.title = "KTM 390"
+            }
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }

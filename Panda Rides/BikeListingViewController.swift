@@ -23,6 +23,10 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
     var selectedIndexvalue: Int = 0
     @IBOutlet weak var menuVIew: NSLayoutConstraint!
     @IBOutlet weak var menuView_: UIView!
+   // @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var stackview: UIView!
+    @IBOutlet weak var lineLblLeading: NSLayoutConstraint!
+    @IBOutlet weak var lineLBL: UILabel!
     
     var menu_array = [MenuItem]()
     
@@ -30,6 +34,10 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         super.viewDidLoad()
         
         //self.navigationController?.navigationBar.isHidden = true
+        
+        //navBar.barTintColor = self.navigationController?.navigationBar.barTintColor
+        //navBar.barStyle = self.navigationController?.navigationBar.barStyle
+        //stackview.backgroundColor = self.navigationController?.navigationBar.backgroundColor
         
         menu_array = [MenuItem(title: "Bike Listing", image: #imageLiteral(resourceName: "ic_view_quilt")),
                           MenuItem(title: "Tariff", image: #imageLiteral(resourceName: "ic_view_quilt")),
@@ -57,6 +65,8 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: filterBtn)
 
         // Do any additional setup after loading the view.
+        
+        
         
         bikeTable.reloadData()
     }
@@ -103,6 +113,33 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         
     }
     
+    @IBAction func bikeORcar(_ sender: UIButton) {
+        
+        
+        
+        lineLblLeading.constant = sender.frame.origin.x
+        
+        
+        //sender.setTitleColor(<#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
+        
+        if sender.tag == 0 {
+            
+            
+            
+        }
+        else
+        {
+            
+        }
+        
+        print(lineLblLeading.constant)
+        print(lineLBL.frame.size.width)
+        
+    }
+    
+    
+    
+    
     @IBAction func selectDate(_ sender: UISegmentedControl) {
         
         
@@ -147,6 +184,11 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         selectedIndexvalue = sender.selectedSegmentIndex
         
     }
+    
+    
+    
+    
+    
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         
