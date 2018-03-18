@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4286E69D53D9AADB053FCEE5 /* Pods_Panda_Rides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AABA2ED909060B0D6CEF160 /* Pods_Panda_Rides.framework */; };
+		97433B1E205E51CD00F81064 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97433B1D205E51CD00F81064 /* APIManager.swift */; };
+		97433B21205E651D00F81064 /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97433B20205E651D00F81064 /* Bike.swift */; };
+		97433B23205E6EDA00F81064 /* ImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97433B22205E6EDA00F81064 /* ImageClass.swift */; };
 		9755E451204812C000BC78CD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755E450204812C000BC78CD /* DetailsViewController.swift */; };
 		9755E453204812F300BC78CD /* DetailsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755E452204812F300BC78CD /* DetailsImageTableViewCell.swift */; };
 		9755E4552048131A00BC78CD /* DetailsInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755E4542048131A00BC78CD /* DetailsInfoTableViewCell.swift */; };
@@ -22,6 +26,7 @@
 		975BB49A204800D900F36712 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BB499204800D900F36712 /* MenuTableViewCell.swift */; };
 		97AD1178204C1191004A5F3F /* TarrifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1177204C1191004A5F3F /* TarrifViewController.swift */; };
 		97AD117A204C11E5004A5F3F /* TariffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1179204C11E5004A5F3F /* TariffTableViewCell.swift */; };
+		97AE53FD205D279200611D68 /* Constand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AE53FC205D279200611D68 /* Constand.swift */; };
 		97D5B75F20427E6400A2439B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B75E20427E6400A2439B /* AppDelegate.swift */; };
 		97D5B76120427E6400A2439B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D5B76020427E6400A2439B /* ViewController.swift */; };
 		97D5B76420427E6500A2439B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D5B76220427E6500A2439B /* Main.storyboard */; };
@@ -31,6 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8DDB71E5800F8D6A2E16E0 /* Pods-Panda Rides.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panda Rides.release.xcconfig"; path = "Pods/Target Support Files/Pods-Panda Rides/Pods-Panda Rides.release.xcconfig"; sourceTree = "<group>"; };
+		4AABA2ED909060B0D6CEF160 /* Pods_Panda_Rides.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Panda_Rides.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97433B1D205E51CD00F81064 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		97433B20205E651D00F81064 /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
+		97433B22205E6EDA00F81064 /* ImageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClass.swift; sourceTree = "<group>"; };
 		9755E450204812C000BC78CD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9755E452204812F300BC78CD /* DetailsImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsImageTableViewCell.swift; sourceTree = "<group>"; };
 		9755E4542048131A00BC78CD /* DetailsInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -46,6 +56,7 @@
 		975BB499204800D900F36712 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		97AD1177204C1191004A5F3F /* TarrifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarrifViewController.swift; sourceTree = "<group>"; };
 		97AD1179204C11E5004A5F3F /* TariffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffTableViewCell.swift; sourceTree = "<group>"; };
+		97AE53FC205D279200611D68 /* Constand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constand.swift; sourceTree = "<group>"; };
 		97D5B75B20427E6400A2439B /* Panda Rides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panda Rides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D5B75E20427E6400A2439B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D5B76020427E6400A2439B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +65,7 @@
 		97D5B76820427E6500A2439B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97D5B76A20427E6500A2439B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D5B7702042E2AF00A2439B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA8243E8A00AF8C97F7D3D41 /* Pods-Panda Rides.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panda Rides.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Panda Rides/Pods-Panda Rides.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +73,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4286E69D53D9AADB053FCEE5 /* Pods_Panda_Rides.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123CB25CEE4FD40CB14F3EBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AABA2ED909060B0D6CEF160 /* Pods_Panda_Rides.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97433B1F205E613F00F81064 /* Model Class */ = {
+			isa = PBXGroup;
+			children = (
+				97433B20205E651D00F81064 /* Bike.swift */,
+			);
+			path = "Model Class";
+			sourceTree = "<group>";
+		};
 		975BB48B2047D26800F36712 /* Bike Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +125,8 @@
 			children = (
 				97D5B75D20427E6400A2439B /* Panda Rides */,
 				97D5B75C20427E6400A2439B /* Products */,
+				AD293DA6550D2796CB5280A8 /* Pods */,
+				123CB25CEE4FD40CB14F3EBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +141,7 @@
 		97D5B75D20427E6400A2439B /* Panda Rides */ = {
 			isa = PBXGroup;
 			children = (
+				97433B1F205E613F00F81064 /* Model Class */,
 				975BB48E2047DC3200F36712 /* DateClass */,
 				975BB48B2047D26800F36712 /* Bike Cell */,
 				97D5B75E20427E6400A2439B /* AppDelegate.swift */,
@@ -124,8 +156,20 @@
 				97D5B76520427E6500A2439B /* Assets.xcassets */,
 				97D5B76720427E6500A2439B /* LaunchScreen.storyboard */,
 				97D5B76A20427E6500A2439B /* Info.plist */,
+				97AE53FC205D279200611D68 /* Constand.swift */,
+				97433B1D205E51CD00F81064 /* APIManager.swift */,
+				97433B22205E6EDA00F81064 /* ImageClass.swift */,
 			);
 			path = "Panda Rides";
+			sourceTree = "<group>";
+		};
+		AD293DA6550D2796CB5280A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA8243E8A00AF8C97F7D3D41 /* Pods-Panda Rides.debug.xcconfig */,
+				0E8DDB71E5800F8D6A2E16E0 /* Pods-Panda Rides.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97D5B76D20427E6500A2439B /* Build configuration list for PBXNativeTarget "Panda Rides" */;
 			buildPhases = (
+				599E1E93D4E729A034B02B6E /* [CP] Check Pods Manifest.lock */,
 				97D5B75720427E6400A2439B /* Sources */,
 				97D5B75820427E6400A2439B /* Frameworks */,
 				97D5B75920427E6400A2439B /* Resources */,
+				4FCC6F6282D8958303499A3B /* [CP] Embed Pods Frameworks */,
+				0BD418FE84FDD24BEBDADBE4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +242,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BD418FE84FDD24BEBDADBE4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panda Rides/Pods-Panda Rides-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FCC6F6282D8958303499A3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Panda Rides/Pods-Panda Rides-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panda Rides/Pods-Panda Rides-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		599E1E93D4E729A034B02B6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Panda Rides-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		97D5B75720427E6400A2439B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -204,14 +307,18 @@
 				975BB4942047DC5000F36712 /* StepCollectionViewFlowLayout.swift in Sources */,
 				9755E4552048131A00BC78CD /* DetailsInfoTableViewCell.swift in Sources */,
 				975BB4952047DC5000F36712 /* DateTimePicker.swift in Sources */,
+				97433B23205E6EDA00F81064 /* ImageClass.swift in Sources */,
 				9755E453204812F300BC78CD /* DetailsImageTableViewCell.swift in Sources */,
 				975BB4982047EAE400F36712 /* FilterTableViewController.swift in Sources */,
 				9755E4572048198400BC78CD /* LocationTableViewCell.swift in Sources */,
 				97D5B76120427E6400A2439B /* ViewController.swift in Sources */,
+				97AE53FD205D279200611D68 /* Constand.swift in Sources */,
 				975BB4932047DC5000F36712 /* FullDateCollectionViewCell.swift in Sources */,
 				975BB48D2047D28A00F36712 /* BikeTableViewCell.swift in Sources */,
 				975BB48A2047BF1200F36712 /* BikeListingViewController.swift in Sources */,
+				97433B1E205E51CD00F81064 /* APIManager.swift in Sources */,
 				975BB4962047DC5000F36712 /* DateCollectionViewCell.swift in Sources */,
+				97433B21205E651D00F81064 /* Bike.swift in Sources */,
 				9755E4592048270E00BC78CD /* ContactTableViewController.swift in Sources */,
 				97AD117A204C11E5004A5F3F /* TariffTableViewCell.swift in Sources */,
 				97D5B75F20427E6400A2439B /* AppDelegate.swift in Sources */,
@@ -352,6 +459,7 @@
 		};
 		97D5B76E20427E6500A2439B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8243E8A00AF8C97F7D3D41 /* Pods-Panda Rides.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +475,7 @@
 		};
 		97D5B76F20427E6500A2439B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8DDB71E5800F8D6A2E16E0 /* Pods-Panda Rides.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

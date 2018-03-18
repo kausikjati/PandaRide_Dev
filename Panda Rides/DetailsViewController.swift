@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    
+    var bike : Bike? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
         }
         else
         {
-            return 4
+            return bike?.location.count ?? 0
         }
         
     
@@ -104,6 +106,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
             {
                 let bikeCell = tableView.dequeueReusableCell(withIdentifier: "image") as! DetailsImageTableViewCell
                 bikeCell.selectionStyle = .none
+                bikeCell.image_view.loadImageAsync(with: bike?.image)
             
                 return bikeCell
             
@@ -111,7 +114,10 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
             else
             {
                 let infocell = tableView.dequeueReusableCell(withIdentifier: "info") as! DetailsInfoTableViewCell
-                infocell.description_lbl.text = "Bagnan , Kolkata , Westbengal , 711303 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usingBagnan , Kolkata , Westbengal , 711303 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usingBagnan , Kolkata , Westbengal , 711303 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usingBagnan , Kolkata , Westbengal , 711303 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usingBagnan , Kolkata , Westbengal , 711303 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+                infocell.description_lbl.text = bike?.description
+                infocell.name_lbl.text = bike?.name
+                infocell.price_day.text = "Price per day :\(bike?.day_cost ?? "0")₹"
+                infocell.price_hours.text = "Price per hour :\(bike?.hour_cost ?? "0")₹"
             
                 return infocell
             }
@@ -121,7 +127,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
             {
                 let locationCell = tableView.dequeueReusableCell(withIdentifier: "location") as! LocationTableViewCell
                 locationCell.selectionStyle = .none
-                
+                locationCell.location.text = bike?.location[indexPath.row]
                 return locationCell
             }
     }
@@ -144,7 +150,7 @@ extension DetailsViewController: UITableViewDelegate, UITableViewDataSource
         {
             if indexPath.row == 0
             {
-                self.title = "KTM 390"
+                self.title = bike?.name
             }
         }
         

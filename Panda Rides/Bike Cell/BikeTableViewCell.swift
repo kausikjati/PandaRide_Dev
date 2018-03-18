@@ -13,6 +13,7 @@ class BikeTableViewCell: UITableViewCell {
     @IBOutlet weak var location_lbl: UILabel!
     @IBOutlet weak var bikeName: UILabel!
     @IBOutlet weak var info_lbl: UILabel!
+    @IBOutlet weak var bikeImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

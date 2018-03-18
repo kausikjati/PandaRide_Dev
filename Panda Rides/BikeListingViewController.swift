@@ -15,7 +15,14 @@ struct MenuItem
     let image : UIImage?
 }
 
+enum vehicle : String {
+    case car = "C"
+    case bike = "B"
+}
+
 class BikeListingViewController: UIViewController, DateTimePickerDelegate {
+    @IBOutlet weak var loadingLbl: UILabel!
+    @IBOutlet weak var bikeLoader: UIView!
     @IBOutlet weak var menuTable: UITableView!
     @IBOutlet weak var bikeTable: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -29,6 +36,8 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
     @IBOutlet weak var lineLBL: UILabel!
     
     var menu_array = [MenuItem]()
+    var bike = [Bike]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +75,54 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
 
         // Do any additional setup after loading the view.
         
-        
-        
-        bikeTable.reloadData()
+     self.apiCall(for: .bike)
+       
+            
+       
     }
+    
+    
+    func apiCall(for type : vehicle) -> Void
+    {
+        
+        self.bike.removeAll()
+        self.bikeTable.reloadData()
+        
+        bikeLoader.isHidden = false
+        
+        if type == .car
+        {
+            loadingLbl.text = "Loading Cars..."
+        }
+        else
+        {
+             loadingLbl.text = "Loading Bikes..."
+        }
+        
+       
+        
+        APIManager.sharedInstance.getBikelisting(for: bikeListing, parameters:["type" : type.rawValue]) { (json, error) in
+            
+            self.bikeLoader.isHidden = true
+            
+            if let json_obj = json
+            {
+                let data = json_obj["data"]["listing"]
+                
+                for item in data
+                {
+                    let bike = Bike(BikeJson: item.1)
+                    print(item.1)
+                    self.bike.append(bike)
+                    
+                }
+                
+                self.bikeTable.reloadData()
+            }
+            
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -118,18 +171,15 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         
         
         lineLblLeading.constant = sender.frame.origin.x
-        
-        
-        //sender.setTitleColor(<#T##color: UIColor?##UIColor?#>, for: <#T##UIControlState#>)
-        
+       
         if sender.tag == 0 {
             
-            
+            self.apiCall(for: .bike)
             
         }
         else
         {
-            
+            self.apiCall(for: .car)
         }
         
         print(lineLblLeading.constant)
@@ -232,7 +282,7 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
         
         if tableView.tag == 0
         {
-            return 20
+            return bike.count
         }
         else
         {
@@ -273,9 +323,22 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
         let bikeCell = tableView.dequeueReusableCell(withIdentifier: "bikeinfo") as! BikeTableViewCell
         bikeCell.mainView.layer.cornerRadius = 5
         //bikeCell.mainView.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: -0.5, height: 1), radius: 3, scale: true)
-        bikeCell.location_lbl.text = "Bagnan , Kolkata , Westbengal , 711303"
-        bikeCell.info_lbl.text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+            
+        let bike = self.bike[indexPath.row]
+        bikeCell.bikeName.text = bike.name
         
+            if bike.location.count > 0
+            {
+                
+                bikeCell.location_lbl.text = bike.location[0]
+                
+            }
+            
+        
+        bikeCell.info_lbl.text = "\(bike.hour_cost)₹ for a Hour OR \(bike.day_cost)₹ for a Day"
+        
+        bikeCell.bikeImage.loadImageAsync(with: bike.image)
+            
         bikeCell.selectionStyle = .none
         
         return bikeCell
@@ -321,6 +384,7 @@ extension BikeListingViewController: UITableViewDelegate , UITableViewDataSource
             
             
             let bikelisting_obj = self.storyboard?.instantiateViewController(withIdentifier: "details") as! DetailsViewController
+            bikelisting_obj.bike = self.bike[indexPath.row]
             self.navigationController?.pushViewController(bikelisting_obj, animated: true)
         }
     }
