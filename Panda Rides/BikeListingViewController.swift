@@ -101,9 +101,9 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         
        
         
-        APIManager.sharedInstance.getBikelisting(for: bikeListing, parameters:["type" : type.rawValue]) { (json, error) in
+        APIManager.sharedInstance.getBikelisting(for: bikeListing, parameters:["type" : type.rawValue]) {[weak self] (json, error) in
             
-            self.bikeLoader.isHidden = true
+            self?.bikeLoader.isHidden = true
             
             if let json_obj = json
             {
@@ -112,12 +112,16 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
                 for item in data
                 {
                     let bike = Bike(BikeJson: item.1)
-                    print(item.1)
-                    self.bike.append(bike)
+                    self?.bike.append(bike)
                     
                 }
                 
-                self.bikeTable.reloadData()
+                self?.bikeTable.reloadData()
+            }
+            else
+            {
+                self?.bikeLoader.isHidden = false
+                self?.loadingLbl.text = error?.localizedDescription
             }
             
         }
@@ -171,8 +175,13 @@ class BikeListingViewController: UIViewController, DateTimePickerDelegate {
         
         
         lineLblLeading.constant = sender.frame.origin.x
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.stackview.layoutIfNeeded()
+        })
        
         if sender.tag == 0 {
+            
             
             self.apiCall(for: .bike)
             

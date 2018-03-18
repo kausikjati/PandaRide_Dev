@@ -35,7 +35,8 @@ class APIManager{
         do
         {
             
-            Alamofire.request(resust, method: .post, parameters: parameters , headers: nil).responseJSON {
+            
+            Alamofire.request(resust, method: .post, parameters: parameters , headers: nil).validate().responseJSON {
                 response in
                 switch response.result {
                 case .success:
@@ -53,6 +54,7 @@ class APIManager{
                     DispatchQueue.main.async {
                         
                         onCompletion(nil ,error)
+                        print(error.localizedDescription)
                     }
                 }
             }
